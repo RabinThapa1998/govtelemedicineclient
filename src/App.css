@@ -1,0 +1,11 @@
+.bgstatus {
+  background: linear-gradient(
+    43deg,
+    rgba(127, 178, 243, 1) 0%,
+    rgba(225, 233, 249, 1) 50%
+  );
+}
+
+.datagridheader {
+  background: #2384f5;
+}
