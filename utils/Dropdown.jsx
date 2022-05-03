@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import { Box } from "@mui/material";
+import Collapse from "@mui/material/Collapse";
 
 export default function Dropdown({ dropdownname, dropdownitems }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -38,6 +39,7 @@ export default function Dropdown({ dropdownname, dropdownitems }) {
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
+        transitionDuration={100}
       >
         {dropdownitems.map((each) => {
           return <MenuItem onClick={handleClose}>{each}</MenuItem>;
@@ -81,6 +83,7 @@ export function ViewFullReportDropdown({ dropdownname, dropdownitems }) {
         open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
+        transitionDuration={100}
       >
         {dropdownitems.map((each) => {
           return <MenuItem onClick={handleClose}>{each}</MenuItem>;

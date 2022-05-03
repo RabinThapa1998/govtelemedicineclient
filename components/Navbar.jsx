@@ -1,6 +1,7 @@
 import { Box, Stack, Typography, Avatar } from "@mui/material";
 import React from "react";
-import Dropdown from "../utils/Dropdown";
+import CollapsibleDropdown from "../utils/CollapsibleDropdown";
+// import Dropdown from "../utils/Dropdown";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
       }}
       bgcolor={"primary.light"}
     >
-      <Stack direction={"row"}>
+      <Stack direction={"row"} sx={{ alignItems: "center" }}>
         <Typography
           variant="h5"
           color={"primary"}
@@ -22,21 +23,38 @@ const Navbar = () => {
         >
           Kathmandu DH
         </Typography>
-        <Dropdown
+        <CollapsibleDropdown
           dropdownname="New Admission"
-          dropdownitems={["admission1", "admission2", "addmission3"]}
+          dropdownitems={[
+            "Emergency",
+            "Dermatology",
+            "General Medicine",
+            "General Surgery",
+            "Ob/Gyn",
+            "Orthopedics",
+            "Pediatric",
+            "Psychiatric",
+            "Eye",
+          ]}
         />
-        <Dropdown
+        <CollapsibleDropdown
           dropdownname="Under care"
           dropdownitems={["admission1", "admission2", "addmission3"]}
         />
-        <Dropdown
+        <CollapsibleDropdown
           dropdownname="Discharged patient"
           dropdownitems={["admission1", "admission2", "addmission3"]}
         />
-        <Dropdown
+        <CollapsibleDropdown
           dropdownname="Manage"
-          dropdownitems={["admission1", "admission2", "addmission3"]}
+          dropdownitems={[
+            "Users",
+            "Permissions",
+            "Settings",
+            "Fiscal Years",
+            "Org. Units",
+            "Group Access",
+          ]}
         />
       </Stack>
       <Stack

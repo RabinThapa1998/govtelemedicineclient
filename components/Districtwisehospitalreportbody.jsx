@@ -1,11 +1,14 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import DistrictDataTable from "../utils/DistrictDataTable";
+import DistrictDataTable, {
+  CustomDistrictDataTable,
+} from "../utils/DistrictDataTable";
 
 const Districtwisehospitalreportbody = () => {
   return (
-    <Stack direction={"row"}>
-      <DistrictDataTable />
+    <Stack direction={"column"}>
+      {/* <DistrictDataTable /> */}
+      <CustomDistrictDataTable />
     </Stack>
   );
 };
