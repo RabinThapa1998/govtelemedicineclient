@@ -1,5 +1,6 @@
 import { Box, Stack, Typography, Avatar } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import CollapsibleDropdown from "../utils/CollapsibleDropdown";
 // import Dropdown from "../utils/Dropdown";
 
@@ -21,7 +22,7 @@ const Navbar = () => {
           color={"primary"}
           sx={{ fontWeight: "bold", marginRight: "50px" }}
         >
-          Kathmandu DH
+          <Link to="/">Kathmandu DH</Link>
         </Typography>
         <CollapsibleDropdown
           dropdownname="New Admission"

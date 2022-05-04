@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./pages/Home";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/system";
+import DischargedPatientPage from "./pages/DischargedPatientPage";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 const theme = createTheme({
   typography: {
@@ -37,9 +39,17 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
-        <Home />
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/dischargedpatient"
+              element={<DischargedPatientPage />}
+            />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
