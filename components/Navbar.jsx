@@ -40,11 +40,31 @@ const Navbar = () => {
         />
         <CollapsibleDropdown
           dropdownname="Under care"
-          dropdownitems={["admission1", "admission2", "addmission3"]}
+          dropdownitems={[
+            "Emergency",
+            "Dermatology",
+            "General Medicine",
+            "General Surgery",
+            "Ob/Gyn",
+            "Orthopedics",
+            "Pediatric",
+            "Psychiatric",
+            "Eye",
+          ]}
         />
         <CollapsibleDropdown
           dropdownname="Discharged patient"
-          dropdownitems={["admission1", "admission2", "addmission3"]}
+          dropdownitems={[
+            "Emergency",
+            "Dermatology",
+            "General Medicine",
+            "General Surgery",
+            "Ob/Gyn",
+            "Orthopedics",
+            "Pediatric",
+            "Psychiatric",
+            "Eye",
+          ]}
         />
         <CollapsibleDropdown
           dropdownname="Manage"

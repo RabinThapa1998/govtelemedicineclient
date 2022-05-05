@@ -6,6 +6,7 @@ import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/system";
 import DischargedPatientPage from "./pages/DischargedPatientPage";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import NewAdmission from "./pages/NewAdmission";
 
 const theme = createTheme({
   typography: {
@@ -34,6 +35,7 @@ const theme = createTheme({
       main: "#E8143A",
     },
     whitedropdown: { main: "#ffffff", contrastText: "#2384F5" },
+    darkblue: { main: "#0C2C53" },
   },
 });
 function App() {
@@ -47,6 +49,7 @@ function App() {
               path="/dischargedpatient"
               element={<DischargedPatientPage />}
             />
+            <Route path="/newadmission" element={<NewAdmission />} />
           </Routes>
         </Layout>
       </BrowserRouter>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const DepartmentDetailsCards = ({
   departmentname,
@@ -8,6 +9,7 @@ const DepartmentDetailsCards = ({
   todayregister,
   color,
 }) => {
+  const navigate = useNavigate();
   return (
     <Stack
       direction={"column"}
@@ -45,51 +47,94 @@ const DepartmentDetailsCards = ({
           size="small"
           color={"greenbutton"}
           startIcon={<span class="material-symbols-outlined">add</span>}
+          onClick={() => navigate("/newadmission")}
         >
           new
         </Button>
       </Stack>
-      <Stack
-        direction={"column"}
-        bgcolor="bggray.main"
-        sx={{ px: "8px", py: "10px" }}
-      >
-        <Stack direction={"row"} sx={{ justifyContent: "space-between" }}>
-          <Typography variant="body1" color="initial">
-            Discharged Patient
-          </Typography>
-          <Typography
-            variant="body1"
-            color="error"
-            sx={{ fontWeight: "600", width: "20%", textAlign: "center" }}
+      <Stack direction={"column"} bgcolor="bggray.main" sx={{ py: "10px" }}>
+        <Button sx={{ width: "100%", borderRadius: "0" }} size="small">
+          <Stack
+            direction={"row"}
+            sx={{
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+            m={0}
+            p={0}
           >
-            {dischargedpatient}
-          </Typography>
-        </Stack>
-        <Stack direction={"row"} sx={{ justifyContent: "space-between" }}>
-          <Typography variant="body1" color="initial">
-            Patient Under Care
-          </Typography>
-          <Typography
-            variant="body1"
-            color="error"
-            sx={{ fontWeight: "600", width: "20%", textAlign: "center" }}
+            <Typography
+              variant="body1"
+              color="initial"
+              sx={{ whiteSpace: "nowrap", textTransform: "capitalize" }}
+            >
+              Discharged Patient
+            </Typography>
+            <Typography
+              variant="body1"
+              color="error"
+              sx={{ fontWeight: "600", width: "20%", textAlign: "center" }}
+            >
+              {dischargedpatient}
+            </Typography>
+          </Stack>
+        </Button>
+        <Button sx={{ width: "100%", borderRadius: "0" }} size="small">
+          <Stack
+            direction={"row"}
+            sx={{
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+            m={0}
+            p={0}
           >
-            {patientundercare}
-          </Typography>
-        </Stack>
-        <Stack direction={"row"} sx={{ justifyContent: "space-between" }}>
-          <Typography variant="body1" color="initial">
-            Today Register
-          </Typography>
-          <Typography
-            variant="body1"
-            color="error"
-            sx={{ fontWeight: "600", width: "20%", textAlign: "center" }}
+            <Typography
+              variant="body1"
+              color="initial"
+              sx={{ whiteSpace: "nowrap", textTransform: "capitalize" }}
+            >
+              Patient Under Care
+            </Typography>
+            <Typography
+              variant="body1"
+              color="error"
+              sx={{ fontWeight: "600", width: "20%", textAlign: "center" }}
+            >
+              {patientundercare}
+            </Typography>
+          </Stack>
+        </Button>
+        <Button sx={{ width: "100%", borderRadius: "0" }} size="small">
+          <Stack
+            direction={"row"}
+            sx={{
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+            m={0}
+            p={0}
           >
-            {todayregister}
-          </Typography>
-        </Stack>
+            <Typography
+              variant="body1"
+              color="initial"
+              sx={{ whiteSpace: "nowrap", textTransform: "capitalize" }}
+            >
+              Today Register
+            </Typography>
+            <Typography
+              variant="body1"
+              color="error"
+              sx={{
+                fontWeight: "600",
+                width: "20%",
+                textAlign: "center",
+              }}
+            >
+              {todayregister}
+            </Typography>
+          </Stack>
+        </Button>
       </Stack>
     </Stack>
   );
